@@ -1,21 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './components/Navbar';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
-import Dueños from './components/Dueños';
-import Mascotas from './components/Mascotas';
-import Servicios from './components/Servicios';
+import Desparasitacion from './components/Desparasitacion';
+import Vacunacion from './components/Vacunacion';
+import Esterilizacion from './components/Esterilizacion';
+import Urgencias from './components/Urgencias';
+import Hospitalizacion from './components/Hospitalizacion';
 
 function App() {
   return (
     <Router>
-      <NavBar />
-      <div className="container mt-4">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dueños" element={<Dueños />} />
-          <Route path="/mascotas" element={<Mascotas />} />
-          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/desparasitacion" element={<Desparasitacion />} />
+          <Route path="/vacunacion" element={<Vacunacion />} />
+          <Route path="/esterilizacion" element={<Esterilizacion />} />
+          <Route path="/urgencias" element={<Urgencias />} />
+          <Route path="/hospitalizacion" element={<Hospitalizacion />} />
         </Routes>
       </div>
     </Router>
